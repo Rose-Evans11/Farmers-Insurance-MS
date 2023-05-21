@@ -162,14 +162,22 @@
                         <td></td>
                         <td></td>
                     </tr>
-                   
                     <tr>
                         <td> Cost :</td>
                         <td> &nbsp; <asp:TextBox ID="txt_cost" runat="server" ></asp:TextBox>
                       <asp:RequiredFieldValidator ErrorMessage="Required" ControlToValidate="txt_cost"
                                     InitialValue="" runat="server" ForeColor="Red"  ValidationGroup="aa"/>&nbsp;</td>
                     </tr>
-                    
+                    <tr style="height:15px">
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td> Farm Portion :</td>
+                        <td> &nbsp; <asp:TextBox ID="txt_portion" runat="server" ></asp:TextBox>
+                      <asp:RequiredFieldValidator ErrorMessage="Required" ControlToValidate="txt_portion"
+                                    InitialValue="" runat="server" ForeColor="Red"  ValidationGroup="aa"/>&nbsp;</td>
+                    </tr>
                 </table>
                 
             </div>
@@ -179,7 +187,8 @@
                 <table>
                     <tr>
                         <td> Brief Description : </td>
-                        <td> &nbsp; <asp:TextBox ID="txt_desc" runat="server"  TextMode="MultiLine" Width="200px"></asp:TextBox>&nbsp;</td>
+                        <td> &nbsp; <asp:TextBox ID="txt_desc" runat="server"  TextMode="MultiLine" Width="200px"></asp:TextBox><asp:RequiredFieldValidator ErrorMessage="Required" ControlToValidate="txt_desc"
+                                    InitialValue="" runat="server" ForeColor="Red"  ValidationGroup="aa"/>&nbsp;</td>
                     </tr>
                     <tr style="height:15px">
                         <td></td>
@@ -187,7 +196,8 @@
                     </tr>
                     <tr>
                         <td> &nbsp;&nbsp;&nbsp;&nbsp;North :</td>
-                        <td>&nbsp;<asp:TextBox ID="txt_north" runat="server" ></asp:TextBox>&nbsp;</td>
+                        <td>&nbsp;<asp:TextBox ID="txt_north" runat="server" ></asp:TextBox><asp:RequiredFieldValidator ErrorMessage="Required" ControlToValidate="txt_north"
+                                    InitialValue="" runat="server" ForeColor="Red"  ValidationGroup="aa"/>&nbsp;</td>
                     </tr>
                     <tr style="height:15px">
                         <td></td>
@@ -195,7 +205,8 @@
                     </tr>
                     <tr>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; East : </td>
-                        <td>&nbsp; <asp:TextBox ID="txt_east" runat="server" ></asp:TextBox>&nbsp;</td>
+                        <td>&nbsp; <asp:TextBox ID="txt_east" runat="server" ></asp:TextBox> <asp:RequiredFieldValidator ErrorMessage="Required" ControlToValidate="txt_east"
+                                    InitialValue="" runat="server" ForeColor="Red"  ValidationGroup="aa"/>&nbsp;</td>
                     </tr>
                     <tr style="height:15px">
                         <td></td>
@@ -203,7 +214,8 @@
                     </tr>
                     <tr>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; West : </td>
-                        <td>&nbsp; <asp:TextBox ID="txt_west" runat="server"></asp:TextBox>&nbsp;</td>
+                        <td>&nbsp; <asp:TextBox ID="txt_west" runat="server"></asp:TextBox><asp:RequiredFieldValidator ErrorMessage="Required" ControlToValidate="txt_west"
+                                    InitialValue="" runat="server" ForeColor="Red"  ValidationGroup="aa"/>&nbsp;</td>
                     </tr>
                     <tr style="height:15px">
                         <td></td>
@@ -211,11 +223,12 @@
                     </tr>
                     <tr>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; South : </td>
-                        <td>&nbsp; <asp:TextBox ID="txt_south" runat="server"></asp:TextBox>&nbsp;</td>
+                        <td>&nbsp; <asp:TextBox ID="txt_south" runat="server"></asp:TextBox><asp:RequiredFieldValidator ErrorMessage="Required" ControlToValidate="txt_south"
+                                    InitialValue="" runat="server" ForeColor="Red"  ValidationGroup="aa"/>&nbsp;</td>
                     </tr>
                 </table>
                 <br />
-                <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" ValidationGroup="aa"/> 
+                <asp:Button ID="btnSubmit" runat="server" Text="Create Insurance" OnClick="btnSubmit_Click" ValidationGroup="aa" BackColor="#FFC107" BorderStyle="None" ForeColor="White" Width="200" Height="25" /> 
             </div>
         </div>
 <asp:Label runat="server" ID="lbl_session" Visible="false"></asp:Label>

@@ -96,6 +96,24 @@ namespace Farmers_Insurance_MS
         protected global::System.Web.UI.WebControls.LinkButton link_close;
 
         /// <summary>
+        /// gv_report control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gv_report;
+
+        /// <summary>
+        /// SqlDataSourceReport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceReport;
+
+        /// <summary>
         /// lbl_session control.
         /// </summary>
         /// <remarks>

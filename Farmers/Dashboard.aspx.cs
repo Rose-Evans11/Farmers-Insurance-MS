@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -17,6 +19,7 @@ namespace Farmers_Insurance_MS
             if (Request.QueryString["Parameter"] != null)
             {
                 lbl_session.Text = Server.UrlDecode(Request.QueryString["Parameter"].ToString());
+                
 
             }
             //this is displaying information of session information that the previous page get
@@ -41,7 +44,6 @@ namespace Farmers_Insurance_MS
                 }
 
                 con.Close();
-
             }
         }
         //redirecting to pending page
@@ -58,6 +60,18 @@ namespace Farmers_Insurance_MS
         protected void link_close_Click(object sender, EventArgs e)
         {
             Response.Redirect("CloseReport?Parameter=" + lbl_session.Text);
+        }
+        protected void gv_report_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                System.Web.UI.HtmlControls.HtmlImage imageControl = (System.Web.UI.HtmlControls.HtmlImage)e.Row.FindControl("imageControl");
+                if (((DataRowView)e.Row.DataItem)["IDPhoto"] != DBNull.Value)
+                {
+                    imageControl.Src = "data:IDPhoto/png;base64," + Convert.ToBase64String((byte[])(((DataRowView)e.Row.DataItem))["IDPhoto"]);
+                }
+            }
         }
     }
 }

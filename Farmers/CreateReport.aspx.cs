@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
@@ -77,7 +78,9 @@ namespace Farmers_Insurance_MS.Farmers
                         "south, " +
                         "remarks, " +
                         "datePlanted, " +
-                        "dateApplied) VALUES(@ReportID," +
+                        "dateApplied, " +
+                        "emailAddress, " +
+                        "farmPortion) VALUES(@ReportID," +
                         "@firstName, " +
                         "@middleName," +
                         "@lastName," +
@@ -96,7 +99,9 @@ namespace Farmers_Insurance_MS.Farmers
                         "@south," +
                         "@remarks," +
                         "@datePlanted," +
-                        "@dateApplied)", con);
+                        "@dateApplied," +
+                        "@emailAddress," +
+                        "@farmPortion)", con);
                 cmd.Parameters.AddWithValue("@ReportID", 1);
                 cmd.Parameters.AddWithValue("@firstName", txt_fname.Text);
                 cmd.Parameters.AddWithValue("@middleName", txt_mname.Text);
@@ -117,6 +122,8 @@ namespace Farmers_Insurance_MS.Farmers
                 cmd.Parameters.AddWithValue("@remarks", "Pending");
                 cmd.Parameters.AddWithValue("@datePlanted", txt_dtPlanted.Text);
                 cmd.Parameters.AddWithValue("@dateApplied", txt_dtApplied.Text);
+                cmd.Parameters.AddWithValue("@emailAddress", lbl_session.Text);
+                cmd.Parameters.AddWithValue("@farmPortion", txt_dtApplied.Text);
                 cmd.ExecuteNonQuery();
             }
             else
@@ -141,7 +148,9 @@ namespace Farmers_Insurance_MS.Farmers
                         "south, " +
                         "remarks, " +
                         "datePlanted, " +
-                        "dateApplied) VALUES(@ReportID," +
+                        "dateApplied, " +
+                        "emailAddress, " +
+                        "farmPortion) VALUES(@ReportID," +
                         "@firstName, " +
                         "@middleName," +
                         "@lastName," +
@@ -160,8 +169,10 @@ namespace Farmers_Insurance_MS.Farmers
                         "@south," +
                         "@remarks," +
                         "@datePlanted," +
-                        "@dateApplied)", con);
-                cmd.Parameters.AddWithValue("@ReportID", 1);
+                        "@dateApplied," +
+                        "@emailAddress," +
+                        "@farmPortion)", con);
+                cmd.Parameters.AddWithValue("@ReportID", id);
                 cmd.Parameters.AddWithValue("@firstName", txt_fname.Text);
                 cmd.Parameters.AddWithValue("@middleName", txt_mname.Text);
                 cmd.Parameters.AddWithValue("@lastName", txt_lname.Text);
@@ -181,6 +192,8 @@ namespace Farmers_Insurance_MS.Farmers
                 cmd.Parameters.AddWithValue("@remarks", "Pending");
                 cmd.Parameters.AddWithValue("@datePlanted", txt_dtPlanted.Text);
                 cmd.Parameters.AddWithValue("@dateApplied", txt_dtApplied.Text);
+                cmd.Parameters.AddWithValue("@emailAddress", lbl_session.Text);
+                cmd.Parameters.AddWithValue("@farmPortion", txt_dtApplied.Text);
                 cmd.ExecuteNonQuery();
             }
             lbl_note.ForeColor = Color.Black;
@@ -188,5 +201,6 @@ namespace Farmers_Insurance_MS.Farmers
             lbl_note.Text = "Report Successfully Updated!";
             con.Close();
         }
+        
     }
 }
