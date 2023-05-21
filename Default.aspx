@@ -14,9 +14,36 @@
     <div class="col-md-6" style="padding-top: 50px">
         <h4> <b>  Login to your Account</b> </h4>
         <br />
-        <asp:Login ID="UserLogin" runat="server" Height="200px" TitleText="" Width="300px">
-            <LoginButtonStyle BorderStyle="None" CssClass="btn-warning btn-sm" />
-        </asp:Login>
+         <table>
+                    <tr>
+                        <td>Email Address :</td>
+                        <td> &nbsp;<asp:TextBox ID="txt_user" runat="server" PlaceHolder="Email Address" required TextMode="Email"></asp:TextBox>&nbsp; </td>
+                    </tr>
+                     <tr style="height:15px">
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Password : </td>
+                        <td> &nbsp;<asp:TextBox ID="txt_pass" runat="server" Placeholder="Password" TextMode="Password" required></asp:TextBox>&nbsp;</td>
+                      
+                    </tr>
+              
+                    <tr> 
+                        <td></td>
+                            <td> <asp:Label ID="lbl_alert" runat="server" Text=""></asp:Label></td>
+                        </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <br />&nbsp;
+                             <asp:Button ID="btnLogin" OnClick="btnLogin_Click"  runat="server" Text="Log in" class="btn btn-warning btn-s mt-1" style="width: 184px; height: 30px;"  />
+                             <asp:Label runat="server" ID="lbl_fn" Visible="false"></asp:Label>
+                            <asp:Label runat="server" ID="lbl_ln" Visible="false"></asp:Label>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
     </div>
 </div>
 

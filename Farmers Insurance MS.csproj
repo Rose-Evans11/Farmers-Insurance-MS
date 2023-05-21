@@ -112,7 +112,14 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Farmers\CloseReport.aspx" />
+    <Content Include="Farmers\CreateReport.aspx" />
+    <Content Include="Farmers\Dashboard.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Farmers\FarmerChangePassword.aspx" />
+    <Content Include="Farmers\FarmerProfile.aspx" />
+    <Content Include="Farmers\InProcessReport.aspx" />
+    <Content Include="Farmers\PendingReport.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -166,6 +173,7 @@
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="UserDashboard.Master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -184,12 +192,62 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Farmers\CloseReport.aspx.cs">
+      <DependentUpon>CloseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmers\CloseReport.aspx.designer.cs">
+      <DependentUpon>CloseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmers\CreateReport.aspx.cs">
+      <DependentUpon>CreateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmers\CreateReport.aspx.designer.cs">
+      <DependentUpon>CreateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmers\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmers\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmers\FarmerChangePassword.aspx.cs">
+      <DependentUpon>FarmerChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmers\FarmerChangePassword.aspx.designer.cs">
+      <DependentUpon>FarmerChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmers\FarmerProfile.aspx.cs">
+      <DependentUpon>FarmerProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmers\FarmerProfile.aspx.designer.cs">
+      <DependentUpon>FarmerProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmers\InProcessReport.aspx.cs">
+      <DependentUpon>InProcessReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmers\InProcessReport.aspx.designer.cs">
+      <DependentUpon>InProcessReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmers\PendingReport.aspx.cs">
+      <DependentUpon>PendingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Farmers\PendingReport.aspx.designer.cs">
+      <DependentUpon>PendingReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -216,6 +274,13 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="UserDashboard.Master.cs">
+      <DependentUpon>UserDashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDashboard.Master.designer.cs">
+      <DependentUpon>UserDashboard.Master</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -226,7 +291,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Farmers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
