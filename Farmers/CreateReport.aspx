@@ -187,7 +187,7 @@
                 <table>
                     <tr>
                         <td> Brief Description : </td>
-                        <td> &nbsp; <asp:TextBox ID="txt_desc" runat="server"  TextMode="MultiLine" Width="200px"></asp:TextBox><asp:RequiredFieldValidator ErrorMessage="Required" ControlToValidate="txt_desc"
+                        <td> &nbsp; <asp:TextBox ID="txt_desc" runat="server"  TextMode="MultiLine" style="Resize:none; height:100px; width:200px"></asp:TextBox><asp:RequiredFieldValidator ErrorMessage="Required" ControlToValidate="txt_desc"
                                     InitialValue="" runat="server" ForeColor="Red"  ValidationGroup="aa"/>&nbsp;</td>
                     </tr>
                     <tr style="height:15px">
@@ -228,7 +228,7 @@
                     </tr>
                 </table>
                 <br />
-                <asp:Button ID="btnSubmit" runat="server" Text="Create Insurance" OnClick="btnSubmit_Click" ValidationGroup="aa" BackColor="#FFC107" BorderStyle="None" ForeColor="White" Width="200" Height="25" /> 
+                <asp:Button ID="btnSubmit" runat="server" Text="Create Insurance" OnClick="btnSubmit_Click" ValidationGroup="aa" class="btn btn-warning" /> 
             </div>
         </div>
 <asp:Label runat="server" ID="lbl_session" Visible="false"></asp:Label>

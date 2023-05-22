@@ -123,7 +123,7 @@ namespace Farmers_Insurance_MS.Farmers
                 cmd.Parameters.AddWithValue("@datePlanted", txt_dtPlanted.Text);
                 cmd.Parameters.AddWithValue("@dateApplied", txt_dtApplied.Text);
                 cmd.Parameters.AddWithValue("@emailAddress", lbl_session.Text);
-                cmd.Parameters.AddWithValue("@farmPortion", txt_dtApplied.Text);
+                cmd.Parameters.AddWithValue("@farmPortion", txt_portion.Text);
                 cmd.ExecuteNonQuery();
             }
             else
