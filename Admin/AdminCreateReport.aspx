@@ -1,7 +1,6 @@
-﻿<%@ Page Title="Create Report" Language="C#" MasterPageFile="~/UserDashboard.Master" AutoEventWireup="true" CodeBehind="CreateReport.aspx.cs" Inherits="Farmers_Insurance_MS.Farmers.CreateReport" %>
+﻿<%@ Page Title="Create Report" Language="C#" MasterPageFile="~/AdminDashboard.Master" AutoEventWireup="true" CodeBehind="AdminCreateReport.aspx.cs" Inherits="Farmers_Insurance_MS.Admin.AdminCreateReport" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    
-<%--This view will show the dashboard including the farmers info, insurance buttons and insurance report history in table...the data shows will based
+    <%--This view will show the dashboard including the farmers info, insurance buttons and insurance report history in table...the data shows will based
     on the session that was login in the landing page / login form--%>
     <div class="message_con"  style="text-align:center;padding-top:0px;margin-left: 30px;font-size: medium;">
             <asp:Label ID="lbl_note" runat="server" Text=""> </asp:Label>
@@ -18,7 +17,7 @@
                 <table>
                     <tr>
                         <td> &nbsp;&nbsp;&nbsp;First Name : </td>
-                        <td>  &nbsp;<asp:TextBox ID="txt_fname" runat="server" ReadOnly="True"></asp:TextBox>&nbsp;</td>
+                        <td>  &nbsp;<asp:TextBox ID="txt_fname" runat="server"></asp:TextBox>&nbsp;</td>
                     </tr>
                     <tr style="height:15px">
                         <td></td>
@@ -26,7 +25,7 @@
                     </tr>
                     <tr>
                         <td> Middle Name :</td>
-                        <td> &nbsp; <asp:TextBox ID="txt_mname" runat="server" ReadOnly="True"></asp:TextBox>&nbsp;</td>
+                        <td> &nbsp; <asp:TextBox ID="txt_mname" runat="server"></asp:TextBox>&nbsp;</td>
                     </tr>
                     <tr style="height:15px">
                         <td></td>
@@ -34,7 +33,7 @@
                     </tr>
                     <tr>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;Last Name : </td>
-                        <td> &nbsp;<asp:TextBox ID="txt_lname" runat="server" ReadOnly="True"></asp:TextBox>&nbsp;</td>
+                        <td> &nbsp;<asp:TextBox ID="txt_lname" runat="server"></asp:TextBox>&nbsp;</td>
                     </tr>
                       <tr style="height:15px">
                         <td></td>
@@ -59,7 +58,7 @@
                 <table>
                     <tr>
                         <td> Contact Number : </td>
-                        <td> &nbsp; <asp:TextBox ID="txt_contact" runat="server" ReadOnly="True"></asp:TextBox>&nbsp;</td>
+                        <td> &nbsp; <asp:TextBox ID="txt_contact" runat="server"></asp:TextBox>&nbsp;</td>
                     </tr>
                     <tr style="height:15px">
                         <td></td>
@@ -67,7 +66,7 @@
                     </tr>
                     <tr>
                         <td> &nbsp;&nbsp;&nbsp;&nbsp;Email Address:</td>
-                        <td>&nbsp;<asp:TextBox ID="txt_email" runat="server" ReadOnly="True"></asp:TextBox>&nbsp;</td>
+                        <td>&nbsp;<asp:TextBox ID="txt_email" runat="server"></asp:TextBox>&nbsp;</td>
                     </tr>
                     <tr style="height:15px">
                         <td></td>
@@ -75,7 +74,12 @@
                     </tr>
                     <tr>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Barangay : </td>
-                        <td>&nbsp; <asp:TextBox ID="txt_barangay" runat="server" ReadOnly="True"></asp:TextBox>&nbsp;</td>
+                        <td>&nbsp; <asp:DropDownList ID="dl_brgy" runat="server" DataSourceID="SqlDataSourceBarangay" DataTextField="barangayName" DataValueField="barangayName"  ValidateRequestMode="Enabled"   AppendDataBoundItems="True" Height="25px" Width="128px" >
+                          <asp:ListItem Selected="True" Value="" Text="Select Valid ID"></asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSourceBarangay" runat="server" ConnectionString="<%$ ConnectionStrings:db_fifmsConnectionString %>" SelectCommand="SELECT [barangayName] FROM [tbl_barangay] ORDER BY [barangayName]"></asp:SqlDataSource>
+                           <asp:RequiredFieldValidator ErrorMessage="Required" ControlToValidate="dl_brgy"
+                                    InitialValue="" runat="server" ForeColor="Red"  ValidationGroup="aa"/>&nbsp;</td>
                     </tr>
                     <tr style="height:15px">
                         <td></td>
@@ -234,4 +238,5 @@
 <asp:Label runat="server" ID="lbl_session" Visible="false"></asp:Label>
 <asp:Label runat="server" ID="lbl_fn" Visible="false"></asp:Label>
 <asp:Label runat="server" ID="lbl_ln" Visible="false"></asp:Label>
+
 </asp:Content>

@@ -106,6 +106,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin\AdminAddAdmin.aspx" />
+    <Content Include="Admin\AdminAddFarmer.aspx" />
+    <Content Include="Admin\AdminChangePassword.aspx" />
+    <Content Include="Admin\AdminCloseReport.aspx" />
+    <Content Include="Admin\AdminCreateReport.aspx" />
+    <Content Include="Admin\AdminDash.aspx" />
+    <Content Include="Admin\AdminInProcessReport.aspx" />
+    <Content Include="Admin\AdminPendingReport.aspx" />
+    <Content Include="Admin\AdminProfile.aspx" />
+    <Content Include="Admin\Login.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -131,6 +141,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="AdminDashboard.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Help.aspx" />
     <Content Include="Images\ic_close.png" />
@@ -140,6 +151,7 @@
     <Content Include="Images\img_contact.png" />
     <Content Include="Images\img_home.png" />
     <Content Include="Images\img_profile.png" />
+    <Content Include="Index.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -176,6 +188,83 @@
     <Content Include="UserDashboard.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDashboard.Master.cs">
+      <DependentUpon>AdminDashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.Master.designer.cs">
+      <DependentUpon>AdminDashboard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminAddAdmin.aspx.cs">
+      <DependentUpon>AdminAddAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminAddAdmin.aspx.designer.cs">
+      <DependentUpon>AdminAddAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminAddFarmer.aspx.cs">
+      <DependentUpon>AdminAddFarmer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminAddFarmer.aspx.designer.cs">
+      <DependentUpon>AdminAddFarmer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminChangePassword.aspx.cs">
+      <DependentUpon>AdminChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminChangePassword.aspx.designer.cs">
+      <DependentUpon>AdminChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminCloseReport.aspx.cs">
+      <DependentUpon>AdminCloseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminCloseReport.aspx.designer.cs">
+      <DependentUpon>AdminCloseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminCreateReport.aspx.cs">
+      <DependentUpon>AdminCreateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminCreateReport.aspx.designer.cs">
+      <DependentUpon>AdminCreateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminDash.aspx.cs">
+      <DependentUpon>AdminDash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminDash.aspx.designer.cs">
+      <DependentUpon>AdminDash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminInProcessReport.aspx.cs">
+      <DependentUpon>AdminInProcessReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminInProcessReport.aspx.designer.cs">
+      <DependentUpon>AdminInProcessReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPendingReport.aspx.cs">
+      <DependentUpon>AdminPendingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPendingReport.aspx.designer.cs">
+      <DependentUpon>AdminPendingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminProfile.aspx.cs">
+      <DependentUpon>AdminProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminProfile.aspx.designer.cs">
+      <DependentUpon>AdminProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -259,6 +348,13 @@
     <Compile Include="Help.aspx.designer.cs">
       <DependentUpon>Help.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -273,6 +369,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteAdmin.Master.cs">
+      <DependentUpon>SiteAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteAdmin.Master.designer.cs">
+      <DependentUpon>SiteAdmin.Master</DependentUpon>
     </Compile>
     <Compile Include="UserDashboard.Master.cs">
       <DependentUpon>UserDashboard.Master</DependentUpon>
@@ -296,6 +399,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="SiteAdmin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

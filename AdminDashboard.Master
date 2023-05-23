@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminDashboard.master.cs" Inherits="Farmers_Insurance_MS.AdminDashboard" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - FIFMS</title>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+        <%: Styles.Render("~/Content/css") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script type = "text/javascript" >
+        function preventBack() { window.history.forward(); }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script>  
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+         <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <%--<asp:LinkButton ID="link_dash" runat="server"  onclick="link_dash_Click"> Dashboard</asp:LinkButton>--%>
+                    <a class="navbar-brand" runat="server">FIFMS</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><asp:LinkButton ID="link_dashboard" runat="server"  onclick="link_dashboard_Click"> Dashboard</asp:LinkButton></li> 
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Report <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><asp:LinkButton ID="link_create" runat="server"  onclick="link_create_Click">Create Report</asp:LinkButton> </li>
+                            <li><asp:LinkButton ID="link_pending" runat="server"  onclick="link_pending_Click">Pending Report</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="link_process" runat="server"  onclick="link_process_Click">In Process Report</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="link_close" runat="server"  onclick="link_close_Click">Closed Report</asp:LinkButton></li>
+                        </ul>
+                    </li>
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Add <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><asp:LinkButton ID="link_farmer" runat="server"  onclick="link_farmer_Click">Add New Farmer</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="link_admin" runat="server"  onclick="link_admin_Click">Add New Admin</asp:LinkButton></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><asp:LinkButton ID="link_profile" runat="server"  onclick="link_profile_Click">Profile</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="link_change" runat="server"  onclick="link_change_Click">Change Password</asp:LinkButton></li>
+                            <li><asp:LinkButton ID="link_logout" runat="server" OnClick="link_logout_Click"> Logout</asp:LinkButton></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+         
+            </asp:ContentPlaceHolder>
+            
+        </div>
+        <asp:Label runat="server" ID="lbl_session" Visible="false"></asp:Label>
+    </form>
+</body>
+</html>
+
