@@ -63,7 +63,8 @@ namespace Farmers_Insurance_MS
         }
         protected void gv_report_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-
+            //this block of codes will convert the image, enabling to display image
+        
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 System.Web.UI.HtmlControls.HtmlImage imageControl = (System.Web.UI.HtmlControls.HtmlImage)e.Row.FindControl("imageControl");

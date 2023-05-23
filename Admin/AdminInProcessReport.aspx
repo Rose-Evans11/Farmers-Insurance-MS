@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminDashboard.Master" AutoEventWireup="true" CodeBehind="AdminInProcessReport.aspx.cs" Inherits="Farmers_Insurance_MS.Admin.AdminInProcessReport" %>
+﻿<%@ Page Title="In Process Report" Language="C#" MasterPageFile="~/AdminDashboard.Master" AutoEventWireup="true" CodeBehind="AdminInProcessReport.aspx.cs" Inherits="Farmers_Insurance_MS.Admin.AdminInProcessReport" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <%--This view will show the dashboard including the farmers info, insurance buttons and insurance report history in table...the data shows will based

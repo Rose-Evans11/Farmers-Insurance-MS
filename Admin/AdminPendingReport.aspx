@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminDashboard.Master" AutoEventWireup="true" CodeBehind="AdminPendingReport.aspx.cs" Inherits="Farmers_Insurance_MS.Admin.AdminPendingReport" %>
+﻿<%@ Page Title="Pending Report" Language="C#" MasterPageFile="~/AdminDashboard.Master" AutoEventWireup="true" CodeBehind="AdminPendingReport.aspx.cs" Inherits="Farmers_Insurance_MS.Admin.AdminPendingReport" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <%--This view will show the dashboard including the farmers info, insurance buttons and insurance report history in table...the data shows will based
@@ -14,29 +14,29 @@
                 <AlternatingRowStyle BackColor="#FFC107" HorizontalAlign="Center" VerticalAlign="Middle" />
                 <Columns>
                     <asp:CommandField ShowSelectButton="True"  SelectText="View" />
-                    <asp:BoundField DataField="reportID" HeaderText="reportID" ReadOnly="True" SortExpression="reportID" InsertVisible="False" />
-                    <asp:BoundField DataField="firstName" HeaderText="firstName" SortExpression="firstName" />
-                    <asp:BoundField DataField="middleName" HeaderText="middleName" SortExpression="middleName" />
-                    <asp:BoundField DataField="lastName" HeaderText="lastName" SortExpression="lastName" />
-                    <asp:BoundField DataField="contactNumber" HeaderText="contactNumber" SortExpression="contactNumber" />
-                    <asp:BoundField DataField="IDName" HeaderText="IDName" SortExpression="IDName" />
+                    <asp:BoundField DataField="reportID" HeaderText="Report ID" ReadOnly="True" SortExpression="reportID" InsertVisible="False" />
+                    <asp:BoundField DataField="firstName" HeaderText="First Name" SortExpression="firstName" />
+                    <asp:BoundField DataField="middleName" HeaderText="Middle Name" SortExpression="middleName" />
+                    <asp:BoundField DataField="lastName" HeaderText="Last Name" SortExpression="lastName" />
+                    <asp:BoundField DataField="contactNumber" HeaderText="Contact Number" SortExpression="contactNumber" />
+                    <asp:BoundField DataField="IDName" HeaderText="Valid ID" SortExpression="IDName" />
                     <%--<asp:BoundField DataField="IDPhoto" HeaderText="Valid ID Photo" SortExpression="IDPhoto" />--%>
-                    <asp:BoundField DataField="barangayName" HeaderText="barangayName" SortExpression="barangayName" />
-                    <asp:BoundField DataField="insuranceType" HeaderText="insuranceType" SortExpression="insuranceType" />
-                    <asp:BoundField DataField="cropName" HeaderText="cropName" SortExpression="cropName" />
-                    <asp:BoundField DataField="description" HeaderText="description" SortExpression="description" />
-                    <asp:BoundField DataField="farmLocationName" HeaderText="farmLocationName" SortExpression="farmLocationName" />
-                    <asp:BoundField DataField="cost" HeaderText="cost" SortExpression="cost" />
-                    <asp:BoundField DataField="north" HeaderText="north" SortExpression="north" />
-                    <asp:BoundField DataField="east" HeaderText="east" SortExpression="east" />
-                    <asp:BoundField DataField="west" HeaderText="west" SortExpression="west" />
-                    <asp:BoundField DataField="south" HeaderText="south" SortExpression="south" />
-                    <asp:BoundField DataField="remarks" HeaderText="remarks" SortExpression="remarks" />
-                    <asp:BoundField DataField="datePlanted" HeaderText="datePlanted" SortExpression="datePlanted" ApplyFormatInEditMode="true" DataFormatString="{0:d}"/>
-                    <asp:BoundField DataField="dateApplied" HeaderText="dateApplied" SortExpression="dateApplied" ApplyFormatInEditMode="true" DataFormatString="{0:d}"/>
-                    <asp:BoundField DataField="dateStatus" HeaderText="dateStatus" SortExpression="dateStatus" ApplyFormatInEditMode="true" DataFormatString="{0:d}"/>
-                    <asp:BoundField DataField="emailAddress" HeaderText="emailAddress" SortExpression="emailAddress" />
-                    <asp:BoundField DataField="farmPortion" HeaderText="farmPortion" SortExpression="farmPortion" />
+                    <asp:BoundField DataField="barangayName" HeaderText="Barangay Name" SortExpression="barangayName" />
+                    <asp:BoundField DataField="insuranceType" HeaderText="Insurance Type" SortExpression="insuranceType" />
+                    <asp:BoundField DataField="cropName" HeaderText="Crop Name" SortExpression="cropName" />
+                    <asp:BoundField DataField="description" HeaderText="Description" SortExpression="description" />
+                    <asp:BoundField DataField="farmLocationName" HeaderText="Farm Location Name" SortExpression="farmLocationName" />
+                    <asp:BoundField DataField="cost" HeaderText="Cost" SortExpression="cost" />
+                    <asp:BoundField DataField="north" HeaderText="North" SortExpression="north" />
+                    <asp:BoundField DataField="east" HeaderText="East" SortExpression="east" />
+                    <asp:BoundField DataField="west" HeaderText="West" SortExpression="west" />
+                    <asp:BoundField DataField="south" HeaderText="South" SortExpression="south" />
+                    <asp:BoundField DataField="remarks" HeaderText="Remarks" SortExpression="remarks" />
+                    <asp:BoundField DataField="datePlanted" HeaderText="Date Planted" SortExpression="datePlanted" ApplyFormatInEditMode="true" DataFormatString="{0:d}"/>
+                    <asp:BoundField DataField="dateApplied" HeaderText="Date Applied" SortExpression="dateApplied" ApplyFormatInEditMode="true" DataFormatString="{0:d}"/>
+                    <asp:BoundField DataField="dateStatus" HeaderText="Date Status" SortExpression="dateStatus" ApplyFormatInEditMode="true" DataFormatString="{0:d}"/>
+                    <asp:BoundField DataField="emailAddress" HeaderText="Email Address" SortExpression="emailAddress" />
+                    <asp:BoundField DataField="farmPortion" HeaderText="Farm Portion" SortExpression="farmPortion" />
                     <asp:TemplateField HeaderText="ID Photo" SortExpression="IDPhoto">
                         <ItemTemplate>
                             <img src='<%# Eval("IDPhoto") %>' id="imageControl" runat="server" width="100" height="100" />

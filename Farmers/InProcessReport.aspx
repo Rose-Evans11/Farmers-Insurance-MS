@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UserDashboard.Master" AutoEventWireup="true" CodeBehind="InProcessReport.aspx.cs" Inherits="Farmers_Insurance_MS.Farmers.InProcessReport" %>
+﻿<%@ Page Title="In Process" Language="C#" MasterPageFile="~/UserDashboard.Master" AutoEventWireup="true" CodeBehind="InProcessReport.aspx.cs" Inherits="Farmers_Insurance_MS.Farmers.InProcessReport" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row center-block" style="padding-left: 50px; padding-top: 20px;">

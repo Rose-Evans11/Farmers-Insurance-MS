@@ -46,6 +46,8 @@ namespace Farmers_Insurance_MS.Farmers
                 con.Close();
             }
         }
+        //this block of code will allow farmers to create a report
+
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             string constr = ConfigurationManager.ConnectionStrings["db_fifms"].ConnectionString;

@@ -15,6 +15,8 @@ namespace Farmers_Insurance_MS.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+           //this will get the email that will send in parameter
             if (Request.QueryString["Parameter"] != null)
             {
                 lbl_session.Text = Server.UrlDecode(Request.QueryString["Parameter"].ToString());
@@ -23,7 +25,7 @@ namespace Farmers_Insurance_MS.Admin
         }
         protected void gv_report_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-
+            //this will convert and display image in gridview
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 System.Web.UI.HtmlControls.HtmlImage imageControl = (System.Web.UI.HtmlControls.HtmlImage)e.Row.FindControl("imageControl");
@@ -35,6 +37,7 @@ namespace Farmers_Insurance_MS.Admin
         }
         protected void gv_report_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //this will called when user selected a row in the gridview and this will display the information in the form
             GridViewRow row = gv_report.SelectedRow;
             lbl_report_id.Text = row.Cells[1].Text;
             lbl_fname.Text = row.Cells[2].Text;
@@ -77,6 +80,7 @@ namespace Farmers_Insurance_MS.Admin
 
         protected void btn_update_Click(object sender, EventArgs e)
         {
+            //this will allow admin to update 
             string constr = ConfigurationManager.ConnectionStrings["db_fifms"].ConnectionString;
             SqlConnection con = new SqlConnection(constr);
             con.Open();

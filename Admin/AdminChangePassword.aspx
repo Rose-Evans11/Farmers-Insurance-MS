@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminDashboard.Master" AutoEventWireup="true" CodeBehind="AdminChangePassword.aspx.cs" Inherits="Farmers_Insurance_MS.Admin.AdminChangePassword" %>
+﻿<%@ Page Title="Change Password" Language="C#" MasterPageFile="~/AdminDashboard.Master" AutoEventWireup="true" CodeBehind="AdminChangePassword.aspx.cs" Inherits="Farmers_Insurance_MS.Admin.AdminChangePassword" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row center-block" style="padding-left: 50px; padding-top: 100px">
         <center>

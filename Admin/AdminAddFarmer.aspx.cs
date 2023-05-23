@@ -14,12 +14,18 @@ namespace Farmers_Insurance_MS.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //this will get the parameter
+            if (Request.QueryString["Parameter"] != null)
+            {
+                lbl_session.Text = Server.UrlDecode(Request.QueryString["Parameter"].ToString());
 
+            }
             btn_update.Visible = false;
         }
 
         protected void btn_add_Click(object sender, EventArgs e)
         {
+            //this will allow admin to add new farmer
             string constr = ConfigurationManager.ConnectionStrings["db_fifms"].ConnectionString;
             SqlConnection con = new SqlConnection(constr);
             SqlCommand cmd = new SqlCommand("SELECT MAX(farmerID) farmerID FROM tbl_farmers", con);
@@ -98,6 +104,7 @@ namespace Farmers_Insurance_MS.Admin
         }
         protected void btn_update_Click(object sender, EventArgs e)
         {
+            //this will allow admin to update information of the user
             btn_update.Visible = true;
             string constr = ConfigurationManager.ConnectionStrings["db_fifms"].ConnectionString;
 
@@ -128,6 +135,7 @@ namespace Farmers_Insurance_MS.Admin
         }
         protected void gv_report_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //this will display the selected row in the form
             GridViewRow row = gv.SelectedRow;
             lbl_id.Text = row.Cells[1].Text;
             lbl_fname.Text = row.Cells[2].Text;

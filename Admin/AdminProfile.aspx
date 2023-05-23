@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminDashboard.Master" AutoEventWireup="true" CodeBehind="AdminProfile.aspx.cs" Inherits="Farmers_Insurance_MS.Admin.AdminProfile" %>
+﻿<%@ Page Title="Admin Profile" Language="C#" MasterPageFile="~/AdminDashboard.Master" AutoEventWireup="true" CodeBehind="AdminProfile.aspx.cs" Inherits="Farmers_Insurance_MS.Admin.AdminProfile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <div class="message_con" style="text-align: center; padding-top: 0px; margin-left: 30px; font-size: medium;">
         <asp:Label ID="lbl_note" runat="server" Text=""> </asp:Label>

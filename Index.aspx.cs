@@ -16,12 +16,14 @@ namespace Farmers_Insurance_MS
 
         protected void btnAdmin_Click(object sender, EventArgs e)
         {
+            //this will redirect the user into Admin Login
             Response.Redirect("~/Admin/Login");
 
         }
 
         protected void btnFarmers_Click1(object sender, EventArgs e)
         {
+            //this will redirect the user into farmers Login
             Response.Redirect("~/Default");
 
         }

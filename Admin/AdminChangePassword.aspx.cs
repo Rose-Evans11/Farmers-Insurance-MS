@@ -14,6 +14,8 @@ namespace Farmers_Insurance_MS.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //this will get the value of parameter which is the email
+
             if (Request.QueryString["Parameter"] != null)
             {
                 lbl_session.Text = Server.UrlDecode(Request.QueryString["Parameter"].ToString());
@@ -23,6 +25,7 @@ namespace Farmers_Insurance_MS.Admin
         }
         protected void OnChangingPassword(object sender, LoginCancelEventArgs e)
         {
+            //this allowadmin to change their password
             if (!ChangePassword.CurrentPassword.Equals(ChangePassword.NewPassword, StringComparison.CurrentCultureIgnoreCase))
             {
                 int rowsAffected = 0;

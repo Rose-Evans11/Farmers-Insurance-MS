@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UserDashboard.Master" AutoEventWireup="true" CodeBehind="CloseReport.aspx.cs" Inherits="Farmers_Insurance_MS.Farmers.CloseReport" %>
+﻿<%@ Page Title="Closed Report" Language="C#" MasterPageFile="~/UserDashboard.Master" AutoEventWireup="true" CodeBehind="CloseReport.aspx.cs" Inherits="Farmers_Insurance_MS.Farmers.CloseReport" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
      <div class="row center-block" style="padding-left: 50px; padding-top: 20px;">
         <h5><strong>Insurance Report History</strong></h5>

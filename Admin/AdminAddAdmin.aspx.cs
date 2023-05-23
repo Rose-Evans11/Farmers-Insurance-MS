@@ -14,11 +14,20 @@ namespace Farmers_Insurance_MS.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //this will get the parameter and set it in lbl session
+            if (Request.QueryString["Parameter"] != null)
+            {
+                lbl_session.Text = Server.UrlDecode(Request.QueryString["Parameter"].ToString());
+
+            }
             btn_update.Visible = false;
         }
 
         protected void btn_add_Click(object sender, EventArgs e)
         {
+            //this code of blocks will connect on the database of fifms and get the max ID of the tbl_admin
+            //Admin will allow to add new admin
+
             string constr = ConfigurationManager.ConnectionStrings["db_fifms"].ConnectionString;
             SqlConnection con = new SqlConnection(constr);
             SqlCommand cmd = new SqlCommand("SELECT MAX(adminID) adminID FROM tbl_admin", con);
@@ -83,6 +92,7 @@ namespace Farmers_Insurance_MS.Admin
         }
         protected void btn_edit_Click(object sender, EventArgs e)
         {
+            //this will shows  the button for update
             btn_add.Visible = false;
             btn_update.Visible = true;
             set_pass.Visible = false;
@@ -90,6 +100,7 @@ namespace Farmers_Insurance_MS.Admin
         }
         protected void btn_update_Click(object sender, EventArgs e)
         {
+            //this block of codes will allow admin to update the information of the specific admin account
             btn_update.Visible = true;
             string constr = ConfigurationManager.ConnectionStrings["db_fifms"].ConnectionString;
 
@@ -119,6 +130,7 @@ namespace Farmers_Insurance_MS.Admin
         }
         protected void gv_report_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //this will display the selected data in the form
             GridViewRow row = gv.SelectedRow;
             lbl_id.Text = row.Cells[1].Text;
             lbl_fname.Text = row.Cells[2].Text;

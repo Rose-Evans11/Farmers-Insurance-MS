@@ -15,12 +15,14 @@ namespace Farmers_Insurance_MS.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //this will get the value of parameter which is the email
             if (Request.QueryString["Parameter"] != null)
             {
                 lbl_session.Text = Server.UrlDecode(Request.QueryString["Parameter"].ToString());
 
             }
         }
+        //this code of block will display image in the gridview
         protected void gv_report_RowDataBound(object sender, GridViewRowEventArgs e)
         {
 
@@ -32,7 +34,7 @@ namespace Farmers_Insurance_MS.Admin
                     imageControl.Src = "data:IDPhoto/png;base64," + Convert.ToBase64String((byte[])(((DataRowView)e.Row.DataItem))["IDPhoto"]);
                 }
             }
-        }
+        }//the following code of blocks will display the selected row in gridview to the form, accordingly to the column in gridview
         protected void gv_report_SelectedIndexChanged(object sender, EventArgs e)
         {
             GridViewRow row = gv_report.SelectedRow;
@@ -74,7 +76,7 @@ namespace Farmers_Insurance_MS.Admin
                 }
             }
         }
-
+        //this code of blocks will connect to the database and update the remarks of the selected report with their id from table report
         protected void btn_update_Click(object sender, EventArgs e)
         {
             string constr = ConfigurationManager.ConnectionStrings["db_fifms"].ConnectionString;
