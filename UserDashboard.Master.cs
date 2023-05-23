@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -49,6 +50,12 @@ namespace Farmers_Insurance_MS
         protected void link_dash_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Farmers/Dashboard?Parameter=" + lbl_session.Text);
+        }
+        protected void link_logout_Click(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
+            Response.Redirect("~/Default");
+
         }
     }
 }
